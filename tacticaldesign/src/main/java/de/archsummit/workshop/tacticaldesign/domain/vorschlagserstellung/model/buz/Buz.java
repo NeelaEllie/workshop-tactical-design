@@ -15,5 +15,6 @@ public class Buz {
     private BuzBf buzBf = new BuzBf();
     @Builder.Default
     private BuzBr buzBr = new BuzBr();
+    private Beruf beruf = new Beruf();
 
 }

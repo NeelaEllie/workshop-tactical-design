@@ -13,13 +13,11 @@ public class BuzBr extends BaseBuz {
 
     private Integer wunschrente;
     private boolean azubiStudent;
-    private boolean berufsstarter;
 
-    public BuzBr(boolean present, Integer leistungsdauer, Integer leistungsdynamikErhoehungProz, Integer wunschrente,
-            boolean azubiStudent, boolean berufsstarter) {
-        super(present, leistungsdauer, leistungsdynamikErhoehungProz);
+    public BuzBr(boolean present, Integer endalterLeistungsdauer, Integer wunschrente,
+            boolean azubiStudent) {
+        super(present, endalterLeistungsdauer);
         this.wunschrente = wunschrente;
         this.azubiStudent = azubiStudent;
-        this.berufsstarter = berufsstarter;
     }
 }

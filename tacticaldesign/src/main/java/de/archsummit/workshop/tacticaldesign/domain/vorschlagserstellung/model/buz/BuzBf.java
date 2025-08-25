@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 public class BuzBf extends BaseBuz {
 
-    public BuzBf(boolean present, Integer leistungsdauer, Integer leistungsdynamikErhoehungProz) {
-        super(present, leistungsdauer, leistungsdynamikErhoehungProz);
+    public BuzBf(boolean present, Integer endalterLeistungsdauer) {
+        super(present, endalterLeistungsdauer);
     }
 }
