@@ -23,7 +23,9 @@ import lombok.NoArgsConstructor;
 public class Vorschlag {
 
     @Default
-    private VorgangId vorgangId = new VorgangId();
+    private final VorgangId vorgangId = new VorgangId();
+
+    private Tarif tarif = Tarif.FRV;
 
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate versicherungsbeginn;

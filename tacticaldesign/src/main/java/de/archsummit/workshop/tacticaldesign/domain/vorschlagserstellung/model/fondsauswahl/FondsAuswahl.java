@@ -1,5 +1,7 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.fondsauswahl;
 
+import java.util.ArrayList;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,5 +19,5 @@ public class FondsAuswahl {
     private Integer wertsteigerungMaximum;
     private Integer wertsteigerungIndividuell;
 
-    private List<FondsAnteil> garantieFonds;
+    private List<FondsAnteil> fondsAnteile = new ArrayList<>();
 }
