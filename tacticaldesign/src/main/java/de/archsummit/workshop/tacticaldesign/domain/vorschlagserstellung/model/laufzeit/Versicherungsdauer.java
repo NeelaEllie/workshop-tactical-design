@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Versicherungsdauer {
 
-    private ArtVersicherungsdauer artVersicherungsdauer;
+    private ArtVersicherungsdauer art;
     private Integer wert;
 }

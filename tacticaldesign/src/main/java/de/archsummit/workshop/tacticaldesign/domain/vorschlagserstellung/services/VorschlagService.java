@@ -1,28 +1,32 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.springframework.stereotype.Service;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.Tarif;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.Vorschlag;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.Vorschlagvalidierung;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.vorbelegung.FrvVorschlagVorbelegung;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
 public class VorschlagService {
 
+    private final FrvVorschlagVorbelegung frvVorschlagVorbelegung;
     private final VorschlagRepository vorschlagRepository;
+    private final Vorschlagvalidierung vorschlagvalidierung;
 
-    // TODO Folgeaufgabe: Produktspezifische Vorbelegung
-
-    public Vorschlag erstelleNeuenVorschlag(final Tarif tarif) {
-        Vorschlag vorschlag = Vorschlag.builder().tarif(tarif).build();
+    public Vorschlag erstelleNeuenVorschlag() {
+        final var vorschlag = frvVorschlagVorbelegung.create();
         return vorschlagRepository.save(vorschlag);
     }
 
     public Vorschlag getVorschlag(final VorgangId vorgangId) {
         return vorschlagRepository.getVorschlag(vorgangId)
                 .orElseThrow(() -> new IllegalArgumentException("Vorschlag nicht gefunden"));
+    }
+
+    public void validiereVorschlag(final VorgangId vorgangId) {
+        final var vorschlag = getVorschlag(vorgangId);
+        vorschlagvalidierung.validiere(vorschlag);
     }
 }

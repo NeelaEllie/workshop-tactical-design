@@ -12,7 +12,4 @@ public abstract class BaseBuz {
     private boolean present;
     private Integer endalterLeistungsdauer;
 
-    public boolean isPresent() {
-        return present;
-    }
 }

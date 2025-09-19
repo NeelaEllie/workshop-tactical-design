@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Beitragszahlung {
 
-    private ArtBeitragszahlungsdauer artBeitragszahlungsdauer;
-    private Integer beitragszahlungsdauer;
+    private ArtBeitragszahlungsdauer art;
+    private Integer wert;
 
 }

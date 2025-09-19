@@ -1,8 +1,8 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation;
 
-public class ValidationException extends RuntimeException {
+public class ValidierungException extends RuntimeException {
 
-    public ValidationException(String message) {
+    public ValidierungException(String message) {
         super(message);
     }
 }
