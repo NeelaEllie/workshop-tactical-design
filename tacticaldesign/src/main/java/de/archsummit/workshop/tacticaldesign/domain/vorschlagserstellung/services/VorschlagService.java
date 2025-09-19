@@ -1,5 +1,6 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services;
 
+import java.util.List;
 import org.springframework.stereotype.Service;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.Vorschlag;
