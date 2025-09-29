@@ -1,24 +1,24 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.mapping;
 
 import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.tarifierungsergebnis.Tarifierungsergebnis;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.tarifierungsergebnis.FrvTarifierungsergebnis;
 import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.TarifierungsergebnisEntity;
 
 @Component
 public class TarifierungsergebnisEntityMapper {
 
-    public Tarifierungsergebnis mapToDomain(TarifierungsergebnisEntity entity) {
+    public FrvTarifierungsergebnis mapToDomain(TarifierungsergebnisEntity entity) {
         if (entity == null) {
             return null;
         }
-        return Tarifierungsergebnis.builder()
+        return FrvTarifierungsergebnis.builder()
                 .garantierteRenteGemZahlweise(entity.getGarantierteRenteGemZahlweise())
                 .garantiertesVertragsguthaben(entity.getGarantiertesVertragsguthaben())
                 .gesamtBeitragGemZahlweise(entity.getGesamtBeitragGemZahlweise())
                 .build();
     }
 
-    public TarifierungsergebnisEntity mapToEntity(Tarifierungsergebnis domain, TarifierungsergebnisEntity entity) {
+    public TarifierungsergebnisEntity mapToEntity(FrvTarifierungsergebnis domain, TarifierungsergebnisEntity entity) {
         if (domain == null) {
             return null;
         }

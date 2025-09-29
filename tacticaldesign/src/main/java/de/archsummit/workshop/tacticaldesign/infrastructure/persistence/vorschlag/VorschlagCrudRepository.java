@@ -2,7 +2,6 @@ package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschl
 
 import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.VorgangId;
 import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.VorschlagEntity;
 
 public interface VorschlagCrudRepository extends CrudRepository<VorschlagEntity, Long> {

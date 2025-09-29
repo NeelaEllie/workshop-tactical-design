@@ -1,8 +1,8 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.mapping;
 
 import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.beitrag.Beitrag;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.beitrag.Zahlweise;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.Beitrag;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.Zahlweise;
 import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.BeitragEntity;
 
 @Component

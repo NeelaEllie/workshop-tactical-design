@@ -2,7 +2,7 @@ package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.servic
 
 import java.util.List;
 import org.springframework.stereotype.Service;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.Vorschlag;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.Vorschlag;
 import lombok.RequiredArgsConstructor;
 
 @Service

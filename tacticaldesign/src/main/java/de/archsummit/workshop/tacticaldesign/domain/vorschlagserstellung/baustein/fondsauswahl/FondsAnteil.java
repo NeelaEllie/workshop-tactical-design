@@ -1,4 +1,4 @@
-package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.fondsauswahl;
+package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

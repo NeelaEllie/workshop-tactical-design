@@ -1,7 +1,7 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.parts;
 
 import java.time.LocalDate;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.Vorschlag;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.Vorschlag;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.ValidierungException;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.Validator;
 

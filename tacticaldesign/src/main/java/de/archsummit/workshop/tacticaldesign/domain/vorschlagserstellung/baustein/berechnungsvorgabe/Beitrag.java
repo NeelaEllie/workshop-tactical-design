@@ -1,6 +1,5 @@
-package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.beitrag;
+package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe;
 
-import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,8 +1,8 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.parts;
 
 import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.Vorschlag;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.laufzeit.Laufzeit;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.Vorschlag;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.Laufzeit;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.ValidierungException;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.Validator;
 

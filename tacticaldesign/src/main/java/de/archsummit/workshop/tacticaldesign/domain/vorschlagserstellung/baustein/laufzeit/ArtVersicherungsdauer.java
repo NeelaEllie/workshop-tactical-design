@@ -1,4 +1,4 @@
-package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.laufzeit;
+package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit;
 
 import lombok.Getter;
 import lombok.ToString;

@@ -1,4 +1,4 @@
-package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.buz;
+package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.buz;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

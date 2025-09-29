@@ -1,10 +1,10 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.mapping;
 
 import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.buz.Beruf;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.buz.Buz;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.buz.BuzBf;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.buz.BuzBr;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.buz.Beruf;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.buz.Buz;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.buz.BuzBf;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.buz.BuzBr;
 import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.*;
 
 @Component

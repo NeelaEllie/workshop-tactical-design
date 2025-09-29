@@ -1,13 +1,10 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 import org.springframework.stereotype.Repository;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.VorgangId;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.Vorschlag;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.Vorschlag;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.VorschlagRepository;
-import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.TarifierungsergebnisEntity;
 import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.VorschlagEntity;
 import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.mapping.VorschlagEntityMapper;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.laufzeit;
+package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Versicherungsdauer {
+public class Beitragszahlung {
 
-    private ArtVersicherungsdauer art;
+    private ArtBeitragszahlungsdauer art;
     private Integer wert;
+
 }

@@ -1,11 +1,11 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.mapping;
 
 import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.laufzeit.Laufzeit;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.laufzeit.Versicherungsdauer;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.laufzeit.ArtVersicherungsdauer;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.laufzeit.Beitragszahlung;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.laufzeit.ArtBeitragszahlungsdauer;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.Laufzeit;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.Versicherungsdauer;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.ArtVersicherungsdauer;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.Beitragszahlung;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.ArtBeitragszahlungsdauer;
 import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.LaufzeitEntity;
 
 @Component
