@@ -5,7 +5,7 @@ import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.V
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.ValidierungException;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.Validator;
 
-public class NfrVorschlagValidierung implements Validator {
+public class BerechnungVorgabeValidierung implements Validator {
 
     @Override
     public void validiere(Vorschlag vorschlag) throws ValidierungException {

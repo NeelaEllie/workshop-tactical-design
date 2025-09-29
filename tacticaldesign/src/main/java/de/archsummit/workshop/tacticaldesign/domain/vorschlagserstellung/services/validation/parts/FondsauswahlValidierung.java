@@ -21,7 +21,6 @@ public class FondsauswahlValidierung implements Validator {
         if (fondsAuswahl.getFondsAnteile() == null || fondsAuswahl.getFondsAnteile().isEmpty()) {
             throw new ValidierungException("FondsAnteile nicht valide");
         }
-        // Optional: Wertsteigerungen prüfen
         if (fondsAuswahl.getWertsteigerungMinimum() == null || fondsAuswahl.getWertsteigerungMittel() == null
                 || fondsAuswahl.getWertsteigerungMaximum() == null) {
             throw new ValidierungException("Wertsteigerungen nicht valide");

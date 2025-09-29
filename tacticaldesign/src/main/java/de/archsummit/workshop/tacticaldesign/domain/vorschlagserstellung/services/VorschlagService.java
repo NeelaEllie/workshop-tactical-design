@@ -1,10 +1,9 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services;
 
-import java.util.List;
 import org.springframework.stereotype.Service;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.Vorschlag;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.Vorschlagvalidierung;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.FrvVorschlagvalidierung;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.vorbelegung.FrvVorschlagVorbelegung;
 import lombok.RequiredArgsConstructor;
 
@@ -14,7 +13,7 @@ public class VorschlagService {
 
     private final FrvVorschlagVorbelegung frvVorschlagVorbelegung;
     private final VorschlagRepository vorschlagRepository;
-    private final Vorschlagvalidierung vorschlagvalidierung;
+    private final FrvVorschlagvalidierung frvVorschlagvalidierung;
 
     public Vorschlag erstelleNeuenVorschlag() {
         final var vorschlag = frvVorschlagVorbelegung.create();
@@ -28,6 +27,6 @@ public class VorschlagService {
 
     public void validiereVorschlag(final VorgangId vorgangId) {
         final var vorschlag = getVorschlag(vorgangId);
-        vorschlagvalidierung.validiere(vorschlag);
+        frvVorschlagvalidierung.validiere(vorschlag);
     }
 }
