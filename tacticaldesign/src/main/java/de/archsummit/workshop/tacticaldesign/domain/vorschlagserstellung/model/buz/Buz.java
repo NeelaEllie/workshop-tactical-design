@@ -18,6 +18,6 @@ public class Buz {
     private Beruf beruf = new Beruf();
 
     public boolean isPresent() {
-        return buzBf.isPresent() || buzBr.isPresent();
+        return buzBf.isGewaehlt() || buzBr.isGewaehlt();
     }
 }

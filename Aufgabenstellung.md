@@ -1,5 +1,11 @@
 # Aufgabenstellungen Workshop
 
+## Set-Up:
+
+Es handelt sich um ein SpringBoot Projekt mit Maven in Java 21. Es müsste somit ein entsprechendes JDK zur Verfügung
+stehen.
+Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
+
 ## Aufgabe 1: Einführung eines zweiten Produktes
 
 * Folgende Rahmenbedingungen sollen gelten:

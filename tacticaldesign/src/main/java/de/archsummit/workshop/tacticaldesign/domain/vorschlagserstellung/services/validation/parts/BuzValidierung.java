@@ -25,12 +25,12 @@ public class BuzValidierung implements Validator {
             if (buz.getBeruf() == null || buz.getBeruf().getId() == null) {
                 throw new ValidierungException("Der Beruf muss gesetzt sein");
             }
-            if (buz.getBuzBf().isPresent()) {
+            if (buz.getBuzBf().isGewaehlt()) {
                 if (buz.getBuzBf().getEndalterLeistungsdauer() == null) {
                     throw new ValidierungException("Das Endalter der Leistungsdauer muss gesetzt sein");
                 }
             }
-            if (buz.getBuzBr().isPresent()) {
+            if (buz.getBuzBr().isGewaehlt()) {
                 if (buz.getBuzBr().getWunschrente() == null) {
                     throw new ValidierungException("Die BUZ-BR Wunschrente muss gesetzt sein");
                 }

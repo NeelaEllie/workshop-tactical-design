@@ -7,7 +7,7 @@ import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.b
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.buz.Buz;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.buz.BuzBf;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.buz.BuzBr;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.fondsauswahl.FondsAuswahl;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.fondsauswahl.Fondsauswahl;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.laufzeit.Laufzeit;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.tarifierungsergebnis.Tarifierungsergebnis;
 import lombok.AllArgsConstructor;
@@ -40,7 +40,7 @@ public class Vorschlag {
     private Laufzeit laufzeit = new Laufzeit();
 
     @Default
-    private FondsAuswahl fondsAuswahl = new FondsAuswahl();
+    private Fondsauswahl fondsAuswahl = new Fondsauswahl();
 
     @Default
     private Buz buz = new Buz();
@@ -50,14 +50,14 @@ public class Vorschlag {
 
     public void fuegeBuzBfHinzu(final Integer endalterLeistungsdauer) {
         BuzBf buzBf = buz.getBuzBf();
-        buzBf.setPresent(true);
+        buzBf.setGewaehlt(true);
         buzBf.setEndalterLeistungsdauer(endalterLeistungsdauer);
     }
 
     public void fuegeBuzBrHinzu(final Integer wunschrente, final Integer endalterLeistungsdauer,
             final boolean azubiStudent) {
         BuzBr buzBr = buz.getBuzBr();
-        buzBr.setPresent(true);
+        buzBr.setGewaehlt(true);
         buzBr.setEndalterLeistungsdauer(endalterLeistungsdauer);
         buzBr.setWunschrente(wunschrente);
         buzBr.setAzubiStudent(azubiStudent);

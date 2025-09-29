@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public abstract class BaseBuz {
 
-    private boolean present;
+    private boolean gewaehlt;
     private Integer endalterLeistungsdauer;
 
 }

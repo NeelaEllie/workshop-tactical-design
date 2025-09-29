@@ -13,8 +13,11 @@ import lombok.NoArgsConstructor;
 public class Beitrag {
 
     private Zahlweise beitragsZahlweise;
-    private BigDecimal wunschbeitrag;
-    private BigDecimal ergaenzungszahlung;
+    private Double wunschbeitrag;
+    /**
+     * Ist nur für FRV Produkte verfügbar.
+     */
+    private Double ergaenzungszahlung;
 
 }
 

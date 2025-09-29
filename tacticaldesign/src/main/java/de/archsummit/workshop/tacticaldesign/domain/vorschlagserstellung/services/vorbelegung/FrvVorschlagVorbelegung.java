@@ -6,8 +6,7 @@ import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.T
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.Vorschlag;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.beitrag.Beitrag;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.beitrag.Zahlweise;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.buz.Buz;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.fondsauswahl.FondsAuswahl;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.fondsauswahl.Fondsauswahl;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.laufzeit.*;
 
 @Component
@@ -30,7 +29,7 @@ public class FrvVorschlagVorbelegung {
                                 .wert(30)
                                 .build())
                         .build())
-                .fondsAuswahl(FondsAuswahl.builder()
+                .fondsAuswahl(Fondsauswahl.builder()
                         .wertsteigerungMinimum(2)
                         .wertsteigerungMittel(4)
                         .wertsteigerungMaximum(6)

@@ -1,13 +1,16 @@
 spring:
   application:
-    name: tacticaldesign
+    name: taa
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:taadb
     driver-class-name: org.h2.Driver
     username: sa
     password:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
   h2:
     console:
       enabled: true

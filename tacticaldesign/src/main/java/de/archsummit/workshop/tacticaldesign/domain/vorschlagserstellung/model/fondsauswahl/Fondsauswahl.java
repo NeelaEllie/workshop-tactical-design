@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
-public class FondsAuswahl {
+public class Fondsauswahl {
 
     private Risikoerwartung risikoerwartung;
     private Integer wertsteigerungMinimum;

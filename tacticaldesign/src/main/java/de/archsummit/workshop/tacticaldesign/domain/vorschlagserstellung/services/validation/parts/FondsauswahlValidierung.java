@@ -2,7 +2,7 @@ package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.servic
 
 import org.springframework.stereotype.Component;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.Vorschlag;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.fondsauswahl.FondsAuswahl;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.fondsauswahl.Fondsauswahl;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.ValidierungException;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.Validator;
 
@@ -11,7 +11,7 @@ public class FondsauswahlValidierung implements Validator {
 
     @Override
     public void validiere(Vorschlag vorschlag) throws ValidierungException {
-        FondsAuswahl fondsAuswahl = vorschlag.getFondsAuswahl();
+        Fondsauswahl fondsAuswahl = vorschlag.getFondsAuswahl();
         if (fondsAuswahl == null) {
             throw new ValidierungException("FondsAuswahl nicht valide");
         }

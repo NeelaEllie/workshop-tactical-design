@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class FondsAnteil {
 
-    String isin;
-    Integer anteil;
+    private String isin;
+    private Integer anteil;
 
 }
