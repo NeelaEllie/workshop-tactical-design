@@ -13,4 +13,9 @@ public class Anwendungskontext {
         this.tarif = tarif;
         vorgangId = VorgangId.create();
     }
+
+    public Anwendungskontext(VorgangId vorgangId, Tarif tarif) {
+        this.vorgangId = vorgangId;
+        this.tarif = tarif;
+    }
 }

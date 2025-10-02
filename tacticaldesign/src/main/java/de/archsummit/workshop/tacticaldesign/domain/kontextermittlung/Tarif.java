@@ -1,8 +1,10 @@
 package de.archsummit.workshop.tacticaldesign.domain.kontextermittlung;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class Tarif {
 
     private final Auspraegung wert;
@@ -23,7 +25,7 @@ public class Tarif {
         return Auspraegung.SBU.equals(wert);
     }
 
-    enum Auspraegung {
+    public enum Auspraegung {
         FRV, SBU;
     }
 }

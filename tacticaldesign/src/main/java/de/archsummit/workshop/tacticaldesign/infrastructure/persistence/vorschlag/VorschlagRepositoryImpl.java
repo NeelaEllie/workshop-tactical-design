@@ -13,22 +13,22 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class VorschlagRepositoryImpl implements VorschlagRepository {
 
-    private final VorschlagCrudRepository vorschlagCrudRepository;
+    private final VorschlagJpaRepository vorschlagJpaRepository;
     private final VorschlagEntityMapper vorschlagEntityMapper;
 
     @Override
     public Optional<Vorschlag> get(VorgangId vorgangId) {
-        return vorschlagCrudRepository.getVorschlagEntitiesByVorgangId(vorgangId.getValue())
+        return vorschlagJpaRepository.getVorschlagEntitiesByVorgangId(vorgangId.getValue())
                 .map(vorschlagEntityMapper::mapToDomain);
     }
 
     @Override
     public Vorschlag save(Vorschlag vorschlag) {
-        VorschlagEntity entity = vorschlagCrudRepository.getVorschlagEntitiesByVorgangId(
+        VorschlagEntity entity = vorschlagJpaRepository.getVorschlagEntitiesByVorgangId(
                         vorschlag.getVorgangId().getValue())
                 .orElse(new VorschlagEntity());
         vorschlagEntityMapper.mapToEntity(vorschlag, entity);
-        vorschlagCrudRepository.save(entity);
+        vorschlagJpaRepository.save(entity);
         return vorschlagEntityMapper.mapToDomain(entity);
     }
 }
