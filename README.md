@@ -16,13 +16,6 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 
 ## Aufgabe 2a: Einführung von Aggregates
 
-_* Vorbereitender Theorieblock:
-* Herausforderung: wo steckt das Wissen, welche Unterkomponenten für welche Produkte verfügbar sind und welche
-Ausprägung erlaubt ist, wenn man ein Vorschlagsobjekt hat?
-* Lösungsansatz: Produktspezifische Vorschlagobjekte wäre denkbar, erzeugt jedoch eine hohe Redundanz und Verteilung
-von Fachlichkeit, die eigentlich zusammen gehört
-* Aggregate Schnitt mit Kriterien_
-
 * aus Basis des master-Standes: welche Aggregates können sinnvoll geschnitten werden?
 * **Offener Punkt: Fachlicher Kontext transportieren, der für einen Schnitt notwendig ist!**
 
