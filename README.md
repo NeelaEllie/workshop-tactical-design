@@ -8,18 +8,19 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 
 ## Aufgabe 1: Einführung eines zweiten Produktes
 
-* Folgende Rahmenbedingungen sollen gelten:
-    * ohne BUZ
+* auf Basis des master-Standes soll neben dem bestehendes Produkt "FRV" soll ein zweites Produkt "SBU" eingeführt werden
+* Folgende Rahmenbedingungen sollen für dieses gelten:
+    * ohne Fondsauswahl
     * Wunschrente als Vorgabevariante auch möglich (nicht nur Beitrag)
     * keine Ergänzungszahlung erlaubt
 
 ## Aufgabe 2a: Einführung von Aggregates
 
-* Vorbereitender Theorieblock:
-    * Herausforderung: wo steckt das Wissen, welche Unterkomponenten für welche Produkte verfügbar sind und welche
-      Ausprägung erlaubt ist, wenn man ein Vorschlagsobjekt hat?
-    * Lösungsansatz: Produktspezifische Vorschlagobjekte wäre denkbar, erzeugt jedoch eine hohe Redundanz und Verteilung
-      von Fachlichkeit, die eigentlich zusammen gehört
-    * Aggregate Schnitt mit Kriterien
+* aus Basis des master-Standes: welche Aggregates können sinnvoll geschnitten werden?
+* **Offener Punkt: Fachlicher Kontext transportieren, der für einen Schnitt notwendig ist!**
 
 ## Aufgabe 2b: Erweiterung der Validierung (Vorbelegung)
+
+* auf Basis des Branches: 2a_master_einfuehrung_bausteine bzw. dem Ergebnis von Aufgabe 2a soll das zweite Produkt aus
+  Aufgabe 1 eingebunden werden
+* Wie kann die Validierung und ggfls. auch die Vorbelegung mithilfe der Aggregates realisiert werden?
