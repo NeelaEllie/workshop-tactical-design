@@ -20,7 +20,7 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 * auf Basis des master Branches: welche Aggregates können sinnvoll geschnitten werden?
 * **Offener Punkt: Fachlicher Kontext transportieren, der für einen Schnitt notwendig ist!**
 
-## Aufgabe 2b: Erweiterung der Validierung (Vorbelegung)
+## Aufgabe 2b: Erweiterung der Vorbelegung (und optional der Validierung)
 
 * auf Basis des Branches "loesung_2a_einfuehrung_bausteine" bzw. dem Ergebnis von Aufgabe 2a soll das zweite Produkt aus
   Aufgabe 1 eingebunden werden
