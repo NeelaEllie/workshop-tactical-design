@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class FondsauswahlRoot implements BausteinRoot<Fondsauswahl> {
+public class FondsauswahlRoot implements BausteinRoot {
 
     private final AnwendungskontextService anwendungskontextService;
     private final FondsauswahlRepository repository;

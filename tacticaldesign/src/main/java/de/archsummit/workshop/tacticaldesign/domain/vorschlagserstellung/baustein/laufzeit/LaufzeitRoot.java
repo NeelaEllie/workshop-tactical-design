@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class LaufzeitRoot implements BausteinRoot<Laufzeit> {
+public class LaufzeitRoot implements BausteinRoot {
 
     private final AnwendungskontextService anwendungskontextService;
     private final LaufzeitRepository repository;

@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class FrvTarifierungsergebnisRoot implements BausteinRoot<FrvTarifierungsergebnis> {
+public class FrvTarifierungsergebnisRoot implements BausteinRoot {
 
     private final AnwendungskontextService anwendungskontextService;
     private final FrvTarifierungsergebnisRepository repository;

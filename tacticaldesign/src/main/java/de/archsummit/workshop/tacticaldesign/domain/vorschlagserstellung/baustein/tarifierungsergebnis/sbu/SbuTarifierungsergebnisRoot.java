@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class SbuTarifierungsergebnisRoot implements BausteinRoot<SbuTarifierungsergebnis> {
+public class SbuTarifierungsergebnisRoot implements BausteinRoot {
 
     private final AnwendungskontextService anwendungskontextService;
     private final SbuTarifierungsergebnisRepository repository;

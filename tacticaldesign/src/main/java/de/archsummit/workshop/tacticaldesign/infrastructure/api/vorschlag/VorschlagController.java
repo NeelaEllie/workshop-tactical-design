@@ -17,6 +17,7 @@ import lombok.RequiredArgsConstructor;
 public class VorschlagController {
 
     private final VorschlagService vorschlagService;
+    private final VorschlagApiAdapter adapter;
 
     @PutMapping("/{vorgangId}")
     public ResponseEntity<Vorschlag> getInitialenVorschlag(@PathVariable String vorgangId) {
@@ -25,10 +26,9 @@ public class VorschlagController {
     }
 
     @GetMapping("/{vorgangId}")
-    public ResponseEntity<Vorschlag> getVorschlag(@PathVariable String vorgangId) {
+    public ResponseEntity<VorschlagResponse> getVorschlag(@PathVariable String vorgangId) {
         try {
-            Vorschlag saved = vorschlagService.getVorschlag(new VorgangId(vorgangId));
-            return ResponseEntity.ok(saved);
+            return ResponseEntity.ok(adapter.get(new VorgangId(vorgangId)));
         } catch (IllegalArgumentException e) {
             return ResponseEntity.notFound().build();
         }

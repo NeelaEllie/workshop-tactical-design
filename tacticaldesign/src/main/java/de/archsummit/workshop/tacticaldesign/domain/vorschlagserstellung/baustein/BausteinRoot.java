@@ -1,7 +1,7 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein;
 
-public interface BausteinRoot<T extends VorschlagBaustein<T>> {
+public interface BausteinRoot {
 
-    T getOrCreate(final VorgangId vorgangId);
+    VorschlagBaustein getOrCreate(final VorgangId vorgangId);
 
 }

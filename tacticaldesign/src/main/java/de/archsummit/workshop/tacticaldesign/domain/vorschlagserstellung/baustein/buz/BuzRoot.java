@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class BuzRoot implements BausteinRoot<Buz> {
+public class BuzRoot implements BausteinRoot {
 
     private final AnwendungskontextService anwendungskontextService;
     private final BuzRepository repository;

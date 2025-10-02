@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class BerechnungsvorgabeRoot implements BausteinRoot<Berechnungsvorgabe> {
+public class BerechnungsvorgabeRoot implements BausteinRoot {
 
     private final AnwendungskontextService anwendungskontextService;
     private final BerechnungsvorgabeRepository repository;
