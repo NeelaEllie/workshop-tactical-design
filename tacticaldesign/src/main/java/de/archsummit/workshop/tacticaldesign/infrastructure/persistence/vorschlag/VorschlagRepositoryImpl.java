@@ -3,8 +3,8 @@ package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschl
 import java.util.Optional;
 import org.springframework.stereotype.Repository;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.Vorschlag;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.VorschlagRepository;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.VorschlagRepository;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.model.Vorschlag;
 import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.VorschlagEntity;
 import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.mapping.VorschlagEntityMapper;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ public class VorschlagRepositoryImpl implements VorschlagRepository {
     private final VorschlagEntityMapper vorschlagEntityMapper;
 
     @Override
-    public Optional<Vorschlag> getVorschlag(VorgangId vorgangId) {
+    public Optional<Vorschlag> get(VorgangId vorgangId) {
         return vorschlagCrudRepository.getVorschlagEntitiesByVorgangId(vorgangId.getValue())
                 .map(vorschlagEntityMapper::mapToDomain);
     }

@@ -1,13 +1,12 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.mapping;
 
-import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.Fondsauswahl;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.FondsAnteil;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.Risikoerwartung;
-import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.FondsauswahlEntity;
-import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.FondsAnteilEntity;
-
 import java.util.stream.Collectors;
+import org.springframework.stereotype.Component;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.model.FondsAnteil;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.model.Fondsauswahl;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.model.Risikoerwartung;
+import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.FondsAnteilEntity;
+import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.FondsauswahlEntity;
 
 @Component
 public class FondsauswahlEntityMapper {
