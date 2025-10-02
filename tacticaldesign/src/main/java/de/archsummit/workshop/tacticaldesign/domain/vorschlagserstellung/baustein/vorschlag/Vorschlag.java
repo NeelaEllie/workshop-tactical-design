@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Vorschlag {
 
     @Default
-    private final VorgangId vorgangId = new VorgangId();
+    private final VorgangId vorgangId = VorgangId.create();
 
     @Default
     final Tarifierungsergebnis tarifierung = new Tarifierungsergebnis();
