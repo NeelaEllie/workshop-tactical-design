@@ -1,9 +1,9 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.tarifierungsergebnis.frv;
 
-import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.AnwendungskontextService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinRoot;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.tarifierungsergebnis.frv.model.FrvTarifierungsergebnis;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.VorschlagAnwendungskontextService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class FrvTarifierungsergebnisRoot implements BausteinRoot {
 
-    private final AnwendungskontextService anwendungskontextService;
+    private final VorschlagAnwendungskontextService anwendungskontextService;
     private final FrvTarifierungsergebnisRepository repository;
     private final FrvTarifierungsergebnisVorbelegungHandler vorbelegungHandler;
 

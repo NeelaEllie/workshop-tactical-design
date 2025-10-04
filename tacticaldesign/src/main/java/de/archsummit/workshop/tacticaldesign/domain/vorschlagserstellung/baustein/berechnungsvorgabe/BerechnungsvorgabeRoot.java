@@ -1,11 +1,11 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe;
 
-import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.AnwendungskontextService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinRoot;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.model.Berechnungsvorgabe;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.validierung.BerechnungVorgabeValidierung;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.vorbelegung.BerechnungsvorgabeVorbelegungHandler;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.VorschlagAnwendungskontextService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class BerechnungsvorgabeRoot implements BausteinRoot {
 
-    private final AnwendungskontextService anwendungskontextService;
+    private final VorschlagAnwendungskontextService anwendungskontextService;
     private final BerechnungsvorgabeRepository repository;
     private final BerechnungsvorgabeVorbelegungHandler vorbelegungHandler;
     private final BerechnungVorgabeValidierung validator;

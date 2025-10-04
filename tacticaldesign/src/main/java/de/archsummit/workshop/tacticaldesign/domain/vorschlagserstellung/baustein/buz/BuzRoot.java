@@ -1,10 +1,10 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.buz;
 
-import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.AnwendungskontextService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinRoot;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.buz.model.Buz;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.buz.vorbelegung.BuzVorbelegungHandler;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.VorschlagAnwendungskontextService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class BuzRoot implements BausteinRoot {
 
-    private final AnwendungskontextService anwendungskontextService;
+    private final VorschlagAnwendungskontextService anwendungskontextService;
     private final BuzRepository repository;
     private final BuzVorbelegungHandler vorbelegungHandler;
 
