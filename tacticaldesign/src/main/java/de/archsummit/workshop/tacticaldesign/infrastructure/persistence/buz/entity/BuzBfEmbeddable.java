@@ -1,8 +1,7 @@
-package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity;
+package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.buz.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

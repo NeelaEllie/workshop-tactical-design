@@ -1,8 +1,7 @@
-package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.mapping;
+package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.laufzeit;
 
-import org.springframework.stereotype.Component;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.model.*;
-import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.LaufzeitEntity;
+import org.springframework.stereotype.Component;
 
 @Component
 public class LaufzeitEntityMapper {

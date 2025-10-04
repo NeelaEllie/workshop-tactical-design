@@ -1,4 +1,4 @@
-package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity;
+package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.fondsauswahl;
 
 import jakarta.persistence.*;
 import lombok.Data;

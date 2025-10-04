@@ -1,4 +1,4 @@
-package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity;
+package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.buz.entity;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

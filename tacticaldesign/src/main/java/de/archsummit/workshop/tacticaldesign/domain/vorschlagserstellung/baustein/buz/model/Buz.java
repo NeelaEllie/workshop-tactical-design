@@ -19,6 +19,7 @@ public class Buz implements VorschlagBaustein<Buz> {
     private BuzBf buzBf = new BuzBf();
     @Builder.Default
     private BuzBr buzBr = new BuzBr();
+    @Builder.Default
     private Beruf beruf = new Beruf();
 
     public boolean isGewaehlt() {
