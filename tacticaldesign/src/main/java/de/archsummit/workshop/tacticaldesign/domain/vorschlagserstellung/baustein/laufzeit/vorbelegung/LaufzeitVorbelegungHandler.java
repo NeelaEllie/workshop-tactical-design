@@ -1,10 +1,11 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.vorbelegung;
 
-import java.util.List;
-import org.springframework.stereotype.Service;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.Anwendungskontext;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.Anwendungskontext;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.model.Laufzeit;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor

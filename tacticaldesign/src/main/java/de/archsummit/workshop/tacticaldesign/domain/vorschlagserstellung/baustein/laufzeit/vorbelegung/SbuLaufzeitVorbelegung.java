@@ -1,9 +1,9 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.vorbelegung;
 
-import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.Anwendungskontext;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.Anwendungskontext;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.model.*;
+import org.springframework.stereotype.Component;
 
 @Component
 class SbuLaufzeitVorbelegung implements LaufzeitVorbelegung {

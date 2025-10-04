@@ -1,11 +1,12 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag;
 
-import java.util.List;
-import org.springframework.stereotype.Service;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.Anwendungskontext;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.Anwendungskontext;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.model.Tarifierungsergebnis;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.model.Vorschlag;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor

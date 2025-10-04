@@ -1,12 +1,12 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit;
 
-import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.AnwendungskontextService;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.AnwendungskontextService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinRoot;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.model.Laufzeit;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.vorbelegung.LaufzeitVorbelegungHandler;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor

@@ -1,8 +1,8 @@
-package de.archsummit.workshop.tacticaldesign.domain.kontextermittlung;
+package de.archsummit.workshop.tacticaldesign.application.kontextermittlung;
 
-import org.springframework.stereotype.Component;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor

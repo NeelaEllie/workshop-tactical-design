@@ -1,4 +1,4 @@
-package de.archsummit.workshop.tacticaldesign.domain.kontextermittlung;
+package de.archsummit.workshop.tacticaldesign.application.kontextermittlung;
 
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import lombok.Data;

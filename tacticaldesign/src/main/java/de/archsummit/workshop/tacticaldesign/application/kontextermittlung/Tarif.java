@@ -1,4 +1,4 @@
-package de.archsummit.workshop.tacticaldesign.domain.kontextermittlung;
+package de.archsummit.workshop.tacticaldesign.application.kontextermittlung;
 
 import lombok.Builder;
 import lombok.Data;
@@ -13,12 +13,12 @@ public class Tarif {
         return new Tarif(Auspraegung.FRV);
     }
 
-    public boolean isFrv() {
-        return Auspraegung.FRV.equals(wert);
-    }
-
     public static Tarif createSbu() {
         return new Tarif(Auspraegung.SBU);
+    }
+
+    public boolean isFrv() {
+        return Auspraegung.FRV.equals(wert);
     }
 
     public boolean isSbu() {

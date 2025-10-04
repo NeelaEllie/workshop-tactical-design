@@ -1,12 +1,13 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.anwendungskontext;
 
-import java.util.Optional;
-import org.springframework.stereotype.Repository;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.Anwendungskontext;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.AnwendungskontextRepository;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.Tarif;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.Anwendungskontext;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.AnwendungskontextRepository;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.Tarif;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor

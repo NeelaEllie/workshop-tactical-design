@@ -1,11 +1,11 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag;
 
-import org.springframework.stereotype.Service;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.AnwendungskontextService;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.AnwendungskontextService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.model.Vorschlag;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.Vorschlagvalidierung;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor

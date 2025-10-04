@@ -1,12 +1,12 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.api.einstieg;
 
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.Anwendungskontext;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.AnwendungskontextService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.Anwendungskontext;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.AnwendungskontextService;
-import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/einstieg")

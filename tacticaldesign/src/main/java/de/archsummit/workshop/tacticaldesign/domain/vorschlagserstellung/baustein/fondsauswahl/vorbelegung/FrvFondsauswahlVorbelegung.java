@@ -1,9 +1,9 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.vorbelegung;
 
-import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.kontextermittlung.Anwendungskontext;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.Anwendungskontext;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.model.Fondsauswahl;
+import org.springframework.stereotype.Component;
 
 @Component
 class FrvFondsauswahlVorbelegung implements FondsauswahlVorbelegung {
