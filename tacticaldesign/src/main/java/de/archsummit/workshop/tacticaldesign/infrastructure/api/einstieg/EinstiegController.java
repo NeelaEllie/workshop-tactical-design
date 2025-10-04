@@ -1,6 +1,7 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.api.einstieg;
 
 import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.Anwendungskontext;
+import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.AnwendungskontextService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class EinstiegController {
 
-    private final VorschlagAnwendungskontextService anwendungskontextService;
+    private final AnwendungskontextService anwendungskontextService;
 
     @GetMapping("/initialFrv")
     public ResponseEntity<Anwendungskontext> getInitialenFrvVorschlag() {
