@@ -94,6 +94,8 @@ public class Vorschlag {
     /**
      * Das Ergebnis einer Tarifierung basierend auf allen gewählten Produktmerkmalen und Vorgaben. Das Ergebnis kann
      * auch nicht valide sein und transportiert in dem Falle Validierungsfehlermeldungen.
+     * <p>
+     * Die Zusammensetzung eines Tarifierungsergebnisses ist produktspezifisch.
      */
     @Default
     private Tarifierungsergebnis tarifierungsergebnis = new Tarifierungsergebnis();
