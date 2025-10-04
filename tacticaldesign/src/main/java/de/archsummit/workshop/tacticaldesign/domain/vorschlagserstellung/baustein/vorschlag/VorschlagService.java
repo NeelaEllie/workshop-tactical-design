@@ -1,8 +1,8 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag;
 
-import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.AnwendungskontextService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.model.Vorschlag;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.VorschlagAnwendungskontextService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.Vorschlagvalidierung;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,13 +11,13 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class VorschlagService {
 
-    private final AnwendungskontextService anwendungskontextservice;
+    private final VorschlagAnwendungskontextService anwendungskontextService;
     private final VorschlagVorbelegung vorbeleger;
     private final VorschlagRepository vorschlagRepository;
     private final Vorschlagvalidierung vorschlagvalidierung;
 
     public Vorschlag erstelleNeuenVorschlag(final VorgangId vorgangId) {
-        final var vorschlag = vorbeleger.get(anwendungskontextservice.get(vorgangId));
+        final var vorschlag = vorbeleger.get(anwendungskontextService.get(vorgangId));
         return vorschlagRepository.save(vorschlag);
     }
 

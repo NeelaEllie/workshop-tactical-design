@@ -1,12 +1,13 @@
 package de.archsummit.workshop.tacticaldesign.application.kontextermittlung;
 
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.VorschlagAnwendungskontextService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class AnwendungskontextService {
+public class AnwendungskontextService implements VorschlagAnwendungskontextService {
 
     private final AnwendungskontextRepository repository;
 
