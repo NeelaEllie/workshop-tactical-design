@@ -3,7 +3,7 @@ package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.bauste
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Builder.*;
+import lombok.Builder.Default;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +15,8 @@ public class Vorschlag {
 
     @Default
     private final VorgangId vorgangId = VorgangId.create();
+
+    private Tarif tarif;
 
     @Default
     final Tarifierungsergebnis tarifierung = new Tarifierungsergebnis();

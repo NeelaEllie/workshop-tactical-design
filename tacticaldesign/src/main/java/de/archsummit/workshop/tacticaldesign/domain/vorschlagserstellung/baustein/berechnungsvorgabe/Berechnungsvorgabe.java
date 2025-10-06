@@ -18,7 +18,6 @@ public class Berechnungsvorgabe implements VorschlagBaustein<Berechnungsvorgabe>
 
     private VorgangId vorgangId;
     private boolean verfuegbar;
-    private Tarif tarif = Tarif.FRV;
     @Builder.Default
     private Beitrag beitrag = new Beitrag();
     @JsonSerialize(using = LocalDateSerializer.class)
