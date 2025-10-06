@@ -18,7 +18,7 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 ## Aufgabe 2a: Einführung von Aggregates
 
 * auf Basis des master Branches soll der Vorschlag in sinnvolle Aggregates geschnitten werden
-* Kriterien für den Schnitt von Aggregates mit möglichst geringer Komplexität:
+* Kriterien für den Schnitt von Aggregates mit möglichst geringer Komplexität und Abhängigkeit zu anderen Aggregates:
     1. Konsistenz im Lebenszyklus, Konsistenz von Transaktionen
     2. fachliche Konsistenz, Konsistenz der Problemdomäne:
         * Objekte, die in einem sehr engen fachlichen Bezug zueinander stehen, sollten in einem Aggregate
@@ -35,7 +35,6 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 * Quellen:
     * https://www.alibabacloud.com/blog/an-in-depth-understanding-of-aggregation-in-domain-driven-design_598034
     * https://www.informatik-aktuell.de/entwicklung/methoden/domain-driven-design-aggregate-design-am-konkreten-beispiel.html
-* **Offener Punkt: Fachlicher Kontext transportieren, der für einen Schnitt notwendig ist!**
 
 ## Aufgabe 2b: Erweiterung der Vorbelegung (und optional der Validierung)
 
