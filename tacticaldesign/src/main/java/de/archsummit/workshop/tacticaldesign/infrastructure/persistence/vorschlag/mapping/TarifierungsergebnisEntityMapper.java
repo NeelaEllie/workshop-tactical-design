@@ -1,13 +1,11 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.mapping;
 
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.model.Tarifierungsergebnis;
-import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.TarifierungsergebnisEntity;
-import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import org.springframework.stereotype.Component;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.model.Tarifierungsergebnis;
+import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.TarifierungsergebnisEntity;
 
 @Component
 public class TarifierungsergebnisEntityMapper {
@@ -18,7 +16,7 @@ public class TarifierungsergebnisEntityMapper {
         }
         Tarifierungsergebnis domain = new Tarifierungsergebnis();
         // Ableiten der Validität: keine Validierungsfehler => valide
-        domain.setValide(entity.getValidierungsfehler() == null || entity.getValidierungsfehler().isEmpty());
+        domain.setValide(entity.isValide());
         // Collections übertragen
         Set<String> validierungsfehler = domain.getValidierungsfehler();
         validierungsfehler.clear();
@@ -40,6 +38,7 @@ public class TarifierungsergebnisEntityMapper {
         if (entity == null) {
             entity = new TarifierungsergebnisEntity();
         }
+        entity.setValide(domain.isValide());
         // Collections übertragen (Listen im Entity)
         List<String> validierungsfehler = entity.getValidierungsfehler();
         if (validierungsfehler == null) {

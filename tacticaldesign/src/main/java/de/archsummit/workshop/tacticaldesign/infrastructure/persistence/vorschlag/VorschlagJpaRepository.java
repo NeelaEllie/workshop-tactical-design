@@ -6,5 +6,5 @@ import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschla
 
 public interface VorschlagJpaRepository extends CrudRepository<VorschlagEntity, Long> {
 
-    Optional<VorschlagEntity> getVorschlagEntitiesByVorgangId(String vorgangId);
+    Optional<VorschlagEntity> getVorschlagEntityByVorgangId(String vorgangId);
 }

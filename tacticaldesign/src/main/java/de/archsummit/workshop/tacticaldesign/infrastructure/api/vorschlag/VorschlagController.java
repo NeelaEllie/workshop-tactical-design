@@ -1,5 +1,7 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.api.vorschlag;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +19,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class VorschlagController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(VorschlagController.class);
     private final VorschlagService vorschlagService;
     private final VorschlagApiAdapter adapter;
     private final Vorschlagvalidierung vorschlagvalidierung;
@@ -31,8 +34,9 @@ public class VorschlagController {
     public ResponseEntity<VorschlagResponse> getVorschlag(@PathVariable String vorgangId) {
         try {
             return ResponseEntity.ok(adapter.get(new VorgangId(vorgangId)));
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage());
+            return ResponseEntity.internalServerError().build();
         }
     }
 
@@ -45,8 +49,9 @@ public class VorschlagController {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new ValidationResponse(Status.VALIDATION_ERROR, e.getMessage()));
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage());
+            return ResponseEntity.internalServerError().build();
         }
     }
 }

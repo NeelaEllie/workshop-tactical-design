@@ -1,5 +1,7 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.api.berechnungsvorgabe;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +19,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class BerechnungsvorgabeController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(BerechnungsvorgabeController.class);
     private final BerechnungsvorgabeRoot root;
     private final BerechnungVorgabeValidierung validierung;
 
@@ -25,8 +28,9 @@ public class BerechnungsvorgabeController {
         try {
             Berechnungsvorgabe saved = root.getOrCreate(new VorgangId(vorgangId));
             return ResponseEntity.ok(saved);
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage());
+            return ResponseEntity.internalServerError().build();
         }
     }
 
@@ -39,8 +43,9 @@ public class BerechnungsvorgabeController {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new ValidationResponse(Status.VALIDATION_ERROR, e.getMessage()));
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage());
+            return ResponseEntity.internalServerError().build();
         }
     }
 }

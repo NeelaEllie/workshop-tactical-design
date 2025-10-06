@@ -16,7 +16,9 @@ public class VorschlagApiAdapter {
 
     public VorschlagResponse get(final VorgangId vorgangId) {
         return new VorschlagResponse(vorschlagService.getVorschlag(vorgangId),
-                bausteinRoots.stream().map(root -> root.getOrCreate(vorgangId)).toList()
+                bausteinRoots.stream()
+                        .map(root -> root.getOrCreate(vorgangId))
+                        .toList()
         );
     }
 }

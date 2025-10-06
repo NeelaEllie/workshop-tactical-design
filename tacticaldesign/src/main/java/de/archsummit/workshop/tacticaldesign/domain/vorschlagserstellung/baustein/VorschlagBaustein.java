@@ -25,6 +25,16 @@ public interface VorschlagBaustein<T> {
      */
     boolean isVerfuegbar();
 
+    /**
+     * Gibt den Typ des Bausteins zurück. Ist nur relevant, wenn alle Bausteine zusammen aufgelistet (Serialisiert)
+     * werden müssten.
+     *
+     * @return Typ des Bausteins.
+     */
+    default String getTyp() {
+        return getThis().getClass().getName();
+    }
+
     default void ifVerfuegbar(final Consumer<T> consumer) {
         if (isVerfuegbar()) {
             consumer.accept(getThis());

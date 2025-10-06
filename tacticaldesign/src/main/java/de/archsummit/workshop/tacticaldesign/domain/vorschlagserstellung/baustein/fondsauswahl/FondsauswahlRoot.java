@@ -1,12 +1,12 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl;
 
+import org.springframework.stereotype.Component;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinRoot;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.model.Fondsauswahl;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.vorbelegung.FondsauswahlVorbelegungHandler;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.VorschlagAnwendungskontextService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
@@ -19,6 +19,11 @@ public class FondsauswahlRoot implements BausteinRoot {
     @Override
     public Fondsauswahl getOrCreate(VorgangId vorgangId) {
         return repository.get(vorgangId)
-                .orElse(vorbelegungHandler.get(anwendungskontextService.get(vorgangId)));
+                .orElseGet(() -> create(vorgangId));
+    }
+
+    private Fondsauswahl create(VorgangId vorgangId) {
+        Fondsauswahl fondsauswahl = vorbelegungHandler.get(anwendungskontextService.get(vorgangId));
+        return repository.save(fondsauswahl);
     }
 }

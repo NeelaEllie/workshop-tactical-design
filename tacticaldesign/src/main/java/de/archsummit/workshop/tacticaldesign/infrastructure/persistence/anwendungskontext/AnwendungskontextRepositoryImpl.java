@@ -1,13 +1,12 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.anwendungskontext;
 
+import java.util.Optional;
+import org.springframework.stereotype.Repository;
 import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.Anwendungskontext;
 import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.AnwendungskontextRepository;
 import de.archsummit.workshop.tacticaldesign.application.kontextermittlung.Tarif;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
@@ -17,7 +16,7 @@ public class AnwendungskontextRepositoryImpl implements AnwendungskontextReposit
 
     @Override
     public Optional<Anwendungskontext> get(VorgangId vorgangId) {
-        return jpaRepository.findById(vorgangId.getValue())
+        return jpaRepository.findAnwendungskontextEntityByVorgangId(vorgangId.getValue())
                 .map(this::toDomain);
     }
 

@@ -19,6 +19,11 @@ public class BerechnungsvorgabeRoot implements BausteinRoot {
     @Override
     public Berechnungsvorgabe getOrCreate(VorgangId vorgangId) {
         return repository.get(vorgangId)
-                .orElse(vorbelegungHandler.get(anwendungskontextService.get(vorgangId)));
+                .orElseGet(() -> create(vorgangId));
+    }
+
+    private Berechnungsvorgabe create(VorgangId vorgangId) {
+        Berechnungsvorgabe berechnungsvorgabe = vorbelegungHandler.get(anwendungskontextService.get(vorgangId));
+        return repository.save(berechnungsvorgabe);
     }
 }

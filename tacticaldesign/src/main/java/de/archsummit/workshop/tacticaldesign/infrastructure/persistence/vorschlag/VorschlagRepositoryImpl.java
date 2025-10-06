@@ -18,13 +18,13 @@ public class VorschlagRepositoryImpl implements VorschlagRepository {
 
     @Override
     public Optional<Vorschlag> get(VorgangId vorgangId) {
-        return vorschlagJpaRepository.getVorschlagEntitiesByVorgangId(vorgangId.getValue())
+        return vorschlagJpaRepository.getVorschlagEntityByVorgangId(vorgangId.getValue())
                 .map(vorschlagEntityMapper::mapToDomain);
     }
 
     @Override
     public Vorschlag save(Vorschlag vorschlag) {
-        VorschlagEntity entity = vorschlagJpaRepository.getVorschlagEntitiesByVorgangId(
+        VorschlagEntity entity = vorschlagJpaRepository.getVorschlagEntityByVorgangId(
                         vorschlag.getVorgangId().getValue())
                 .orElse(new VorschlagEntity());
         vorschlagEntityMapper.mapToEntity(vorschlag, entity);
