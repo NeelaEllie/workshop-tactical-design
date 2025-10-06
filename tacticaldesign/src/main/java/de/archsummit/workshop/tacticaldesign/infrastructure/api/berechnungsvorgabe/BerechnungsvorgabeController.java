@@ -13,7 +13,7 @@ import de.archsummit.workshop.tacticaldesign.infrastructure.api.ValidationRespon
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/vorschlaege")
+@RequestMapping("/api/berechnungsvorgabe")
 @RequiredArgsConstructor
 public class BerechnungsvorgabeController {
 
@@ -31,7 +31,7 @@ public class BerechnungsvorgabeController {
     }
 
     @PostMapping("/{vorgangId}/validate")
-    public ResponseEntity<ValidationResponse> validateVorschlag(@PathVariable String vorgangId) {
+    public ResponseEntity<ValidationResponse> validate(@PathVariable String vorgangId) {
         try {
             validierung.validiere(new VorgangId(vorgangId));
             return ResponseEntity.ok(new ValidationResponse(Status.OK, "Berechnungvorgabe ist valide"));

@@ -7,6 +7,7 @@ import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustei
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.VorschlagService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.model.Vorschlag;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.ValidierungException;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.Vorschlagvalidierung;
 import de.archsummit.workshop.tacticaldesign.infrastructure.api.Status;
 import de.archsummit.workshop.tacticaldesign.infrastructure.api.ValidationResponse;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +19,7 @@ public class VorschlagController {
 
     private final VorschlagService vorschlagService;
     private final VorschlagApiAdapter adapter;
+    private final Vorschlagvalidierung vorschlagvalidierung;
 
     @PutMapping("/{vorgangId}")
     public ResponseEntity<Vorschlag> getInitialenVorschlag(@PathVariable String vorgangId) {
@@ -37,7 +39,7 @@ public class VorschlagController {
     @PostMapping("/{vorgangId}/validate")
     public ResponseEntity<ValidationResponse> validateVorschlag(@PathVariable String vorgangId) {
         try {
-            vorschlagService.validiereVorschlag(new VorgangId(vorgangId));
+            vorschlagvalidierung.validiere(new VorgangId(vorgangId));
             return ResponseEntity.ok(new ValidationResponse(Status.OK, "Vorschlag ist valide"));
         } catch (ValidierungException e) {
             return ResponseEntity

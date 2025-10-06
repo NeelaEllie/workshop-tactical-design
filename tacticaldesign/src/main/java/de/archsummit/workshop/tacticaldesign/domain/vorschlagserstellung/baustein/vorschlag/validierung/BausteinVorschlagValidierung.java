@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class VorschlagValidierung implements Validator {
+public class BausteinVorschlagValidierung implements Validator {
 
     private final VorschlagService vorschlagService;
 

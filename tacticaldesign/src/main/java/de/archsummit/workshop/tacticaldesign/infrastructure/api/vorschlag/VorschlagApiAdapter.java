@@ -13,7 +13,6 @@ public class VorschlagApiAdapter {
 
     private final VorschlagService vorschlagService;
     private final List<BausteinRoot> bausteinRoots;
-    private final BausteinRoot bausteinRoot;
 
     public VorschlagResponse get(final VorgangId vorgangId) {
         return new VorschlagResponse(vorschlagService.getVorschlag(vorgangId),
