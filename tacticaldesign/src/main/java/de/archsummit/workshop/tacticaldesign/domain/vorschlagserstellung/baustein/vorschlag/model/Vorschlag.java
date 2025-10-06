@@ -15,6 +15,8 @@ public class Vorschlag {
 
     private VorgangId vorgangId;
 
+    private Tarif tarif;
+
     @Default
     final Tarifierungsergebnis tarifierung = new Tarifierungsergebnis();
 }

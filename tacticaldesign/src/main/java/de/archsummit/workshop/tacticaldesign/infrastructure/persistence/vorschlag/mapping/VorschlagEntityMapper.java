@@ -1,10 +1,11 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.mapping;
 
+import org.springframework.stereotype.Component;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.model.Tarif;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.vorschlag.model.Vorschlag;
 import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.vorschlag.entity.VorschlagEntity;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Component;
 
 @Component
 @AllArgsConstructor
@@ -18,6 +19,7 @@ public class VorschlagEntityMapper {
         }
         return Vorschlag.builder()
                 .vorgangId(new VorgangId(entity.getVorgangId()))
+                .tarif(Tarif.valueOf(entity.getTarif()))
                 .tarifierung(tarifierungsergebnisMapper.mapToDomain(entity.getTarifierungsergebnis()))
                 .build();
     }
@@ -27,6 +29,7 @@ public class VorschlagEntityMapper {
             return;
         }
         entity.setVorgangId(domain.getVorgangId().getValue());
+        entity.setTarif(domain.getTarif().name());
         entity.setTarifierungsergebnis(tarifierungsergebnisMapper.mapToEntity(domain.getTarifierung(),
                 entity.getTarifierungsergebnis()));
     }

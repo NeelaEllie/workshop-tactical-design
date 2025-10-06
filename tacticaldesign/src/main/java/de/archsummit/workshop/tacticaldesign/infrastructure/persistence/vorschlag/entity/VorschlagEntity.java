@@ -14,6 +14,8 @@ public class VorschlagEntity {
     @Column(unique = true)
     private String vorgangId;
 
+    private String tarif;
+
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private TarifierungsergebnisEntity tarifierungsergebnis;
 }
