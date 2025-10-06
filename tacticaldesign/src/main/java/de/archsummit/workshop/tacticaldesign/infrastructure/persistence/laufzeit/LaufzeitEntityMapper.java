@@ -1,7 +1,8 @@
 package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.laufzeit;
 
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.model.*;
 import org.springframework.stereotype.Component;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.model.*;
 
 @Component
 public class LaufzeitEntityMapper {
@@ -21,6 +22,7 @@ public class LaufzeitEntityMapper {
                 .wert(entity.getBeitragszahlungWert())
                 .build();
         return Laufzeit.builder()
+                .vorgangId(new VorgangId(entity.getVorgangId()))
                 .versicherungsdauer(versicherungsdauer)
                 .beitragszahlung(beitragszahlung)
                 .build();
@@ -33,6 +35,7 @@ public class LaufzeitEntityMapper {
         if (entity == null) {
             entity = new LaufzeitEntity();
         }
+        entity.setVorgangId(domain.getVorgangId().getValue());
         Versicherungsdauer versicherungsdauer = domain.getVersicherungsdauer();
         entity.setVersicherungsdauerArt(
                 versicherungsdauer != null && versicherungsdauer.getArt() != null ? versicherungsdauer.getArt().name()

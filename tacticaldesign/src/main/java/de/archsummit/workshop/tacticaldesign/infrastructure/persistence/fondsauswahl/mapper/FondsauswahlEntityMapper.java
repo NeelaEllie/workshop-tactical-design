@@ -1,11 +1,13 @@
-package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.fondsauswahl;
+package de.archsummit.workshop.tacticaldesign.infrastructure.persistence.fondsauswahl.mapper;
 
+import java.util.stream.Collectors;
+import org.springframework.stereotype.Component;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.model.FondsAnteil;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.model.Fondsauswahl;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.model.Risikoerwartung;
-import org.springframework.stereotype.Component;
-
-import java.util.stream.Collectors;
+import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.fondsauswahl.entity.FondsAnteilEntity;
+import de.archsummit.workshop.tacticaldesign.infrastructure.persistence.fondsauswahl.entity.FondsauswahlEntity;
 
 @Component
 public class FondsauswahlEntityMapper {
@@ -15,6 +17,8 @@ public class FondsauswahlEntityMapper {
             return null;
         }
         Fondsauswahl domain = new Fondsauswahl();
+        domain.setVerfuegbar(entity.isVerfuegbar());
+        domain.setVorgangId(new VorgangId(entity.getVorgangId()));
         domain.setRisikoerwartung(
                 entity.getRisikoerwartung() != null ? Risikoerwartung.valueOf(entity.getRisikoerwartung()) : null);
         domain.setWertsteigerungMinimum(entity.getWertsteigerungMinimum());
@@ -36,6 +40,8 @@ public class FondsauswahlEntityMapper {
         if (entity == null) {
             entity = new FondsauswahlEntity();
         }
+        entity.setVerfuegbar(domain.isVerfuegbar());
+        entity.setVorgangId(domain.getVorgangId().getValue());
         entity.setRisikoerwartung(domain.getRisikoerwartung() != null ? domain.getRisikoerwartung().name() : null);
         entity.setWertsteigerungMinimum(domain.getWertsteigerungMinimum());
         entity.setWertsteigerungMittel(domain.getWertsteigerungMittel());
