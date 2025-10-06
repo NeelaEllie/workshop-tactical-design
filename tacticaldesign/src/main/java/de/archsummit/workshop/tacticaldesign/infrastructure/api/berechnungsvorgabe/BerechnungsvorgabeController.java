@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.BerechnungsvorgabeRoot;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.model.Berechnungsvorgabe;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.validierung.BerechnungVorgabeValidierung;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.ValidierungException;
 import de.archsummit.workshop.tacticaldesign.infrastructure.api.Status;
 import de.archsummit.workshop.tacticaldesign.infrastructure.api.ValidationResponse;
@@ -17,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 public class BerechnungsvorgabeController {
 
     private final BerechnungsvorgabeRoot root;
+    private final BerechnungVorgabeValidierung validierung;
 
     @GetMapping("/{vorgangId}")
     public ResponseEntity<Berechnungsvorgabe> getBerechnungsvorgabe(@PathVariable String vorgangId) {
@@ -31,7 +33,7 @@ public class BerechnungsvorgabeController {
     @PostMapping("/{vorgangId}/validate")
     public ResponseEntity<ValidationResponse> validateVorschlag(@PathVariable String vorgangId) {
         try {
-            root.validiere(new VorgangId(vorgangId));
+            validierung.validiere(new VorgangId(vorgangId));
             return ResponseEntity.ok(new ValidationResponse(Status.OK, "Berechnungvorgabe ist valide"));
         } catch (ValidierungException e) {
             return ResponseEntity
