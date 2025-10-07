@@ -1,7 +1,7 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.tarifierungsergebnis.sbu;
 
 import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinRoot;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.tarifierungsergebnis.sbu.model.SbuTarifierungsergebnis;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.VorschlagAnwendungskontextService;
@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class SbuTarifierungsergebnisRoot implements BausteinRoot {
+public class SbuTarifierungsergebnisService implements BausteinService {
 
     private final VorschlagAnwendungskontextService anwendungskontextService;
     private final SbuTarifierungsergebnisRepository repository;

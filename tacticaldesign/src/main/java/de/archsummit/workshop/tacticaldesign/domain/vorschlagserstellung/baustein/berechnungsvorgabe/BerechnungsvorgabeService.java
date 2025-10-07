@@ -1,7 +1,7 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe;
 
 import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinRoot;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.model.Berechnungsvorgabe;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.vorbelegung.BerechnungsvorgabeVorbelegungHandler;
@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class BerechnungsvorgabeRoot implements BausteinRoot {
+public class BerechnungsvorgabeService implements BausteinService {
 
     private final VorschlagAnwendungskontextService anwendungskontextService;
     private final BerechnungsvorgabeRepository repository;

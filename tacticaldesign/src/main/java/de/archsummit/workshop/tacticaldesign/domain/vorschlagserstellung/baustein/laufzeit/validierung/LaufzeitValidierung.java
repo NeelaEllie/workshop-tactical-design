@@ -2,7 +2,7 @@ package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.bauste
 
 import org.springframework.stereotype.Component;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.LaufzeitRoot;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.laufzeit.LaufzeitService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.Validator;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.ValidierungException;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class LaufzeitValidierung implements Validator {
 
-    private LaufzeitRoot root;
+    private LaufzeitService root;
 
     @Override
     public void validiere(VorgangId vorgangId) throws ValidierungException {

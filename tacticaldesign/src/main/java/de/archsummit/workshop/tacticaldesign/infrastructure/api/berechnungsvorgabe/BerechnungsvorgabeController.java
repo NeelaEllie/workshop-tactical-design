@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.BerechnungsvorgabeRoot;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.BerechnungsvorgabeService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.model.Berechnungsvorgabe;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.berechnungsvorgabe.validierung.BerechnungVorgabeValidierung;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.services.validation.ValidierungException;
@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 public class BerechnungsvorgabeController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BerechnungsvorgabeController.class);
-    private final BerechnungsvorgabeRoot root;
+    private final BerechnungsvorgabeService root;
     private final BerechnungVorgabeValidierung validierung;
 
     @GetMapping("/{vorgangId}")

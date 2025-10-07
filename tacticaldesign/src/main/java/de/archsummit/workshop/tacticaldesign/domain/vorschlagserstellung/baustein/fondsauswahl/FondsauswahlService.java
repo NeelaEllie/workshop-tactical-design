@@ -1,7 +1,7 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl;
 
 import org.springframework.stereotype.Component;
-import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinRoot;
+import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.BausteinService;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.VorgangId;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.model.Fondsauswahl;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.baustein.fondsauswahl.vorbelegung.FondsauswahlVorbelegungHandler;
@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class FondsauswahlRoot implements BausteinRoot {
+public class FondsauswahlService implements BausteinService {
 
     private final VorschlagAnwendungskontextService anwendungskontextService;
     private final FondsauswahlRepository repository;
