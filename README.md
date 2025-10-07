@@ -23,6 +23,8 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
     2. fachliche Konsistenz, Konsistenz der Problemdomäne:
         * Objekte, die in einem sehr engen fachlichen Bezug zueinander stehen, sollten in einem Aggregate
           zusammengefasst werden.
+        * Beispiel Tarifierungsergbnisse sind stark produktabhängig. Der fachliche Kontext ist somit je Produkt ein
+          anderer.
     3. Konsistenz in den fachlichen Szenarien:
         * welche fachlichen Szenarien umfassen welche Objekte
         * Objekte in häufig auftretenden Szenarien sollten in einem Aggregate zusammengefasst werden
@@ -32,6 +34,8 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
           die Analyse nach der Häufigkeit von fachlichen Änderungen an Objekten hilfreich
         * Objekte mit "stabilen" Anforderungen können von Objekten mit regelmäßig fachlich bedingten Änderungen getrennt
           werden
+        * Beispiel Risikobewertung als große fachliche Domäne mit drei verschiedene Aggregates aufgrund
+          unterschiedlicher Änderungsfrequenz: berufliche und Freizeit-Risiken und Gesundheitsfragen
 * Quellen:
     * https://www.alibabacloud.com/blog/an-in-depth-understanding-of-aggregation-in-domain-driven-design_598034
     * https://www.informatik-aktuell.de/entwicklung/methoden/domain-driven-design-aggregate-design-am-konkreten-beispiel.html
