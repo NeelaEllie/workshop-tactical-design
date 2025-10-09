@@ -18,11 +18,14 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 ## Aufgabe 2a: Einführung von Aggregates
 
 * auf Basis des master Branches soll der Vorschlag in sinnvolle Aggregates geschnitten werden
-* Kriterien für den Schnitt von Aggregates mit möglichst geringer Komplexität:
+* beachte dafür den fachlichen Kontext: [README Fachlicher Kontext.md](README%20Fachlicher%20Kontext.md)
+* Kriterien für den Schnitt von Aggregates mit möglichst geringer Komplexität und Abhängigkeit zu anderen Aggregates:
     1. Konsistenz im Lebenszyklus, Konsistenz von Transaktionen
     2. fachliche Konsistenz, Konsistenz der Problemdomäne:
         * Objekte, die in einem sehr engen fachlichen Bezug zueinander stehen, sollten in einem Aggregate
           zusammengefasst werden.
+        * Beispiel Tarifierungsergbnisse sind stark produktabhängig. Der fachliche Kontext ist somit je Produkt ein
+          anderer.
     3. Konsistenz in den fachlichen Szenarien:
         * welche fachlichen Szenarien umfassen welche Objekte
         * Objekte in häufig auftretenden Szenarien sollten in einem Aggregate zusammengefasst werden
@@ -32,12 +35,13 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
           die Analyse nach der Häufigkeit von fachlichen Änderungen an Objekten hilfreich
         * Objekte mit "stabilen" Anforderungen können von Objekten mit regelmäßig fachlich bedingten Änderungen getrennt
           werden
+        * Beispiel Risikobewertung als große fachliche Domäne mit drei verschiedene Aggregates aufgrund
+          unterschiedlicher Änderungsfrequenz: berufliche und Freizeit-Risiken und Gesundheitsfragen
 * Quellen:
     * https://www.alibabacloud.com/blog/an-in-depth-understanding-of-aggregation-in-domain-driven-design_598034
     * https://www.informatik-aktuell.de/entwicklung/methoden/domain-driven-design-aggregate-design-am-konkreten-beispiel.html
-* **Offener Punkt: Fachlicher Kontext transportieren, der für einen Schnitt notwendig ist!**
 
-## Aufgabe 2b: Erweiterung der Validierung (Vorbelegung)
+## Aufgabe 2b: Erweiterung der Vorbelegung (und optional der Validierung)
 
 * auf Basis des Branches "loesung_2a_einfuehrung_bausteine" bzw. dem Ergebnis von Aufgabe 2a soll das zweite Produkt aus
   Aufgabe 1 eingebunden werden
