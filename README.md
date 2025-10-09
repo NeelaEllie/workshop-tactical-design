@@ -18,6 +18,7 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 ## Aufgabe 2a: Einführung von Aggregates
 
 * auf Basis des master Branches soll der Vorschlag in sinnvolle Aggregates geschnitten werden
+* beachte dafür den fachlichen Kontext: [README Fachlicher Kontext.md](README%20Fachlicher%20Kontext.md)
 * Kriterien für den Schnitt von Aggregates mit möglichst geringer Komplexität und Abhängigkeit zu anderen Aggregates:
     1. Konsistenz im Lebenszyklus, Konsistenz von Transaktionen
     2. fachliche Konsistenz, Konsistenz der Problemdomäne:

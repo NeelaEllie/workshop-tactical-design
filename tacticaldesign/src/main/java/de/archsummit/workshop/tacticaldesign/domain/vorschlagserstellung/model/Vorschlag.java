@@ -1,5 +1,6 @@
 package de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model;
 
+import java.time.LocalDate;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import de.archsummit.workshop.tacticaldesign.domain.vorschlagserstellung.model.beitrag.Beitrag;
@@ -14,8 +15,6 @@ import lombok.Builder;
 import lombok.Builder.Default;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
 
 /**
  * Ein Vorschlag umfasst alle Merkmale eines Produktes. Die verschiedenen Vorgaben und Merkmale spielen eine direkte
@@ -60,15 +59,16 @@ public class Vorschlag {
     private LocalDate geburtsdatum;
 
     /**
-     * Der Beitrag ist eine notwendige Vorgabe für jedes Produkt, bei welchem das Tarifierungsergebnis basierend auf
-     * einem Wunschbeitrag ermittelt wird.
+     * Einen Beitrag hat jedes Produkt. Wenn ein Wunschbeitrag vorgegeben wird, wird basierend darauf die resultierende
+     * Rente ermittelt. Es gibt aber auch Produkte, bei denen eine Wunschrente vorgegeben wird und der Beitrag ermittelt
+     * wird.
      */
     @Default
     private Beitrag beitrag = new Beitrag();
 
     /**
      * Die Laufzeit umfasst verschiedene Laufzeiten einer Versicherung. Die Berechnung erfolgt über die Vorgabe des zu
-     * erreichendem Alter, der Laufzeit in Jahren oder auch einer konkreten Jahreszahl. Zusammen mit dem
+     * erreichenden Alters, der Laufzeit in Jahren oder auch einer konkreten Jahreszahl. Zusammen mit dem
      * Versicherungsbeginn und in einigen Fällen des Geburtsdatums der versicherten Person werden die tatsächlichen
      * Laufzeiten nach produktübergreifenden Regeln ermittelt.
      */
@@ -107,7 +107,7 @@ public class Vorschlag {
     }
 
     public void fuegeBuzBrHinzu(final Integer wunschrente, final Integer endalterLeistungsdauer,
-                                final boolean azubiStudent) {
+            final boolean azubiStudent) {
         BuzBr buzBr = buz.getBuzBr();
         buzBr.setGewaehlt(true);
         buzBr.setEndalterLeistungsdauer(endalterLeistungsdauer);
