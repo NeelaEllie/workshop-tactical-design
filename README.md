@@ -52,5 +52,3 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 
 * Auflösung von Abhängigkeiten zwischen Aggregates über Events
 * Schaffung tatsächlicher Aggregate Roots (Anemic Domain Model vermeiden)
-
-* Merker für Morten: Historie und Budget!
