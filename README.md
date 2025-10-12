@@ -26,10 +26,9 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
           zusammengefasst werden.
         * Beispiel Tarifierungsergbnisse sind stark produktabhängig. Der fachliche Kontext ist somit je Produkt ein
           anderer.
-    3. Konsistenz in den fachlichen Szenarien:
-        * welche fachlichen Szenarien umfassen welche Objekte
+    3. Stabilität gemeinsamer Nutzung in Szenarien
+        * welche fachlichen Szenarien umfassen welche Objekte?
         * Objekte in häufig auftretenden Szenarien sollten in einem Aggregate zusammengefasst werden
-        * Abhängigkeiten von Aggregates sollten vermieden werden
     4. Konsistenz der Änderungsfrequenz von Anforderungen an Objekten und Szenarien
         * umfasst eine Problemdomäne oder Szenario zu viele Objekte für ein Aggregate, ist für eine weitere Aufteilung
           die Analyse nach der Häufigkeit von fachlichen Änderungen an Objekten hilfreich
