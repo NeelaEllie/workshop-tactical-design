@@ -15,6 +15,10 @@ public class Vorschlag {
 
     private VorgangId vorgangId;
 
+    /**
+     * Der Tarif wird beim Einstieg initial gesetzt. Es liegt damit ein anderes Szenario zugrunde, als bei den
+     * produktübergreifenden Berechnungsvorgaben, die wiederkehrend angepasst werden können.
+     */
     private Tarif tarif;
 
     @Default
