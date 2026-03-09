@@ -42,9 +42,11 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 
 ## Aufgabe 2b: Erweiterung der Vorbelegung (und optional der Validierung)
 
-* auf Basis des Branches "loesung_2a_bausteine_vollstaendig" bzw. dem Ergebnis von Aufgabe 2a soll das zweite Produkt
-  aus
-  Aufgabe 1 eingebunden werden
+* die Aufgabe kann auf Basis folgender Stände bearbeitet werden:
+    * auf Basis des Branches "loesung_2a_einfuehrung_bausteine": nicht compilefähiger Zwischenschritt
+    * auf Basis des Branches "loesung_2a_bausteine_vollstaendig": für ein vollständiger Stand, der einige
+      Lösungsschritte bereits vorweg nimmt
+    * auf Basis dem Ergebnis von Aufgabe 2a soll das zweite Produkt aus Aufgabe 1 eingebunden werden
 * Wie kann die Validierung und ggfls. auch die Vorbelegung mithilfe der Aggregates realisiert werden?
 * Welche Herausforderungen und welche Vorteile ergeben sich aus Aggregates?
 
