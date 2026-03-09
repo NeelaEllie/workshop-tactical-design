@@ -2,8 +2,8 @@
 
 ## Set-Up:
 
-Es handelt sich um ein SpringBoot Projekt mit Maven in Java 21. Es müsste somit ein entsprechendes JDK zur Verfügung
-stehen.
+Es handelt sich um ein SpringBoot Projekt mit Maven in Java 21 und Lombok. Es muss somit ein entsprechendes JDK zur
+Verfügung stehen, damit das Projekt lauffähig ist.
 Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 
 ## Aufgabe 1: Einführung eines zweiten Produktes
@@ -42,8 +42,11 @@ Es ist eine Swagger-UI konfiguriert: http://localhost:8080/swagger-ui/index.html
 
 ## Aufgabe 2b: Erweiterung der Vorbelegung (und optional der Validierung)
 
-* auf Basis des Branches "loesung_2a_einfuehrung_bausteine" bzw. dem Ergebnis von Aufgabe 2a soll das zweite Produkt aus
-  Aufgabe 1 eingebunden werden
+* die Aufgabe kann auf Basis folgender Stände bearbeitet werden:
+    * auf Basis des Branches "loesung_2a_einfuehrung_bausteine": nicht compilefähiger Zwischenschritt
+    * auf Basis des Branches "loesung_2a_bausteine_vollstaendig": für ein vollständiger Stand, der einige
+      Lösungsschritte bereits vorweg nimmt
+    * auf Basis dem Ergebnis von Aufgabe 2a soll das zweite Produkt aus Aufgabe 1 eingebunden werden
 * Wie kann die Validierung und ggfls. auch die Vorbelegung mithilfe der Aggregates realisiert werden?
 * Welche Herausforderungen und welche Vorteile ergeben sich aus Aggregates?
 
