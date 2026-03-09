@@ -10,7 +10,7 @@ class BuzVerfuegbarVorbelegung implements BuzVorbelegung {
 
     @Override
     public boolean isZustaendigFuer(Anwendungskontext kontext) {
-        return kontext.getTarif().isFrv() || kontext.getTarif().isSbu();
+        return kontext.getTarif().isFrv();
     }
 
     @Override

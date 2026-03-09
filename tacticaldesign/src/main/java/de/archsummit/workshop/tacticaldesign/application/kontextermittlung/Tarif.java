@@ -13,16 +13,8 @@ public class Tarif {
         return new Tarif(Auspraegung.FRV);
     }
 
-    public static Tarif createSbu() {
-        return new Tarif(Auspraegung.SBU);
-    }
-
     public boolean isFrv() {
         return Auspraegung.FRV.equals(wert);
-    }
-
-    public boolean isSbu() {
-        return Auspraegung.SBU.equals(wert);
     }
 
     public enum Auspraegung {

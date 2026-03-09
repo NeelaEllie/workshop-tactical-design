@@ -1,4 +1,4 @@
-package de.archsummit.workshop.tacticaldesign.infrastructure.api.einstieg;
+package de.archsummit.workshop.tacticaldesign.infrastructure.api;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,14 +29,4 @@ public class EinstiegController {
         }
     }
 
-    @GetMapping("/initialSbu")
-    public ResponseEntity<Anwendungskontext> getInitialenSbuVorschlag() {
-        try {
-            final var anwendungskontext = anwendungskontextService.initSbu();
-            return ResponseEntity.ok(anwendungskontext);
-        } catch (Exception e) {
-            LOGGER.error(e.getMessage());
-            return ResponseEntity.internalServerError().build();
-        }
-    }
 }
