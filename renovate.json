@@ -1,4 +1,42 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":pinAllExceptPeerDependencies"]
+  "extends": ["config:base", ":pinAllExceptPeerDependencies"],
+  "baseBranches": ["master"],
+  "branchConcurrentLimit": 6,
+  "prConcurrentLimit": 4,
+
+  "schedule": ["* * * * 1"],
+
+  "packageRules": [
+    {
+      "matchManagers": ["maven"],
+      "matchUpdateTypes": ["major"],
+      "prConcurrentLimit": 1,
+      "branchPrefix": "renovate/maven-",
+      "prTitle": "Renovate Maven-Major-Update: Update {{depName}} auf {{newVersion}}",
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchManagers": ["maven"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "Alle Minor- und Patch-Updates",
+      "groupSlug": "maven-minor-updates",
+      "prTitle": "Renovate: {{{groupName}}}"
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["major"],
+      "prConcurrentLimit": 1,
+      "branchPrefix": "renovate/npm-",
+      "prTitle": "Renovate NPM-Major-Update: Update {{depName}} auf {{newVersion}}",
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "Alle NPM Minor- und Patch-Updates",
+      "groupSlug": "npm-minor-updates",
+      "prTitle": "Renovate: {{{groupName}}}"
+    }
+  ]
 }
