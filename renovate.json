@@ -5,8 +5,6 @@
   "branchConcurrentLimit": 6,
   "prConcurrentLimit": 4,
 
-  "schedule": ["* * * * 1"],
-
   "packageRules": [
     {
       "matchManagers": ["maven"],
